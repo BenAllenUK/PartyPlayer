@@ -30,23 +30,6 @@
     <div class="site-wrapper">
       <div class="site-wrapper-inner">
         <div class="cover-container">
-
-          <div class="masthead clearfix">
-            <div class="inner">
-              <img src="{{ space.logo_url }}">
-              <h1 class="masthead-brand">Hi PartyPlayer</h1>
-              <ul class="nav masthead-nav">
-                <li class="active"><a href="{{ space.permalink }}">All ideas</a></li>
-                <li><a href="{{ space.permalink }}/pages/about">About</a></li>
-              </ul>
-            </div>
-          </div>
-
-          {% if notice %}
-            {{ notice }}
-          {% endif %}
-
-
           <!--
             Hint: use `content_for_layout` to render the relevant content
             from the ideas or page template
@@ -64,34 +47,7 @@
     </div>
 
 
-    <div class="cs-add">
-      <form action="{{space.permalink}}/ideas" method="post" enctype="multipart/form-data" role="form">
-          <div class="form-group">
-            <label for="idea_title">Title</label>
-            <input type="text" id="idea_title" name="idea[title]" value="{{ idea.title }}" class="form-control" />
-          </div>
 
-          <div class="form-group">
-            <label for="idea_content">Content</label>
-            <textarea id="idea_content" name="idea[content]" class="form-control">{{ idea.content }}</textarea>
-          </div>
-
-          <!--
-            Hint: you can allow participants to upload multiple images. Use a zero
-            based index for referencing each image input, eg.
-
-            idea[images_attributes][0][file]
-            idea[images_attributes][1][file]
-            idea[images_attributes][2][file]
-          -->
-          <div class="form-group">
-            <label for="idea_images_attributes_0_file">Image</label>
-            <input type="file" id="idea_images_attributes_0_file" name="idea[images_attributes][0][file]" class="form-control" />
-          </div>
-
-          <button type="submit" class="btn btn-lg btn-default">Create idea</button>
-        </form>
-    </div>
 
     {% if space.ga_code != "" %}
       <script>
