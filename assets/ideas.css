@@ -199,6 +199,7 @@ body {
   font-weight: normal;
   line-height: 20px;
   color: #404040;
+  background: #3a3a3a;
 }
 .container {
   width: 580px;
@@ -2578,11 +2579,15 @@ textarea {
 }
 .entry {
   width: 520px;
-  position: relative;
+  height:200px;
   clear: left;
-  border-radius: 3px;
-  border: 1px solid #dcdcdc;
-  background: #f5f5f5;
+  border-radius: 25px;
+  position:relative;
+  background: #226719;
+  -webkit-box-shadow: 0px 0px 25px #000000;
+  -moz-box-shadow: 0px 0px 25px #000000;
+  box-shadow: 0px 0px 25px #000000;
+
 }
 .entry h1 {
   margin: 25px 20px 30px 20px;
@@ -2596,7 +2601,6 @@ textarea {
 .entry .interest {
   width: 480px;
   margin: 0 20px 10px 20px;
-  border-top: 2px solid #9f6823;
 }
 .entry #comments {
   margin: 15px 20px;
@@ -2610,11 +2614,9 @@ textarea {
   position: absolute;
   top: -5px;
   right: 12px;
-  background: #235a9f;
   font-size: 25px;
   text-align: center;
   color: #ffffff;
-  box-shadow: 0 2px 0 #c7c7c7;
 }
 .entry .comment-count a {
   color: #ffffff;
@@ -2745,8 +2747,6 @@ textarea {
   float: left;
   position: relative;
   clear: left;
-  background: url('{{ "split.png" | image_url }}') repeat-x #e8e8e8;
-  border-top: 1px solid #fdfdfd;
   color: #808080;
   font-size: 12px;
   -moz-border-radius-bottomright: 4px;
@@ -3241,7 +3241,7 @@ span.countdown_row {
 }
 h1.show {
   cursor: pointer;
-  color: #9f6823;
+  color: #fff;
 }
 #comments-form .checkarea {
   margin-top: 12px;
@@ -3450,6 +3450,37 @@ label.error {
   color: #f5f5f5;
 }
 .cs-add {
-  width:520px;
-  height:400px;
+  background: #226719;
+  margin-top:25px;
+  padding:20px;
+  -webkit-box-shadow: 0px 0px 25px #000000;
+  -moz-box-shadow: 0px 0px 25px #000000;
+  box-shadow: 0px 0px 25px #000000;
+  width: 480px;
+  height: 200px;
+  clear: left;
+  border-radius: 25px;
+  text-center:center;
 }
+.cs-add form {
+  margin-left:auto;
+  margin-right:auto;
+  text-align: center;
+}
+.cs-add button {
+  margin-top:25px;
+}
+.cover-container {
+  margin-left:auto;
+  margin-right:auto;
+  width:522px;
+}
+.form-group {
+  text-align:center;
+}
+h2 {
+  color:#fff;
+}
+/**
+226719
+**/

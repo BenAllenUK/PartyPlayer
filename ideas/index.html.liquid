@@ -2,7 +2,7 @@
 
   {% for idea in space.ideas %}
     <!-- ENTRY -->
-    <div class="entry">
+    <div class="entry" likes="{{ idea.likes }}">
       <h1 class="show">{{ idea.title }}</h1>
       <div class="slide">
         <div class="content">
@@ -46,13 +46,10 @@
 
   <div class="cs-add">
         <form action="{{space.permalink}}/ideas" method="post" enctype="multipart/form-data" role="form">
-            <div class="form-group">
-              <label for="idea_title">Title</label>
-              <input type="text" id="idea_title" name="idea[title]" value="{{ idea.title }}" class="form-control" />
-            </div>
 
+        <h2>Whats the name?</h2>
+<br /><br />
             <div class="form-group">
-              <label for="idea_content">Content</label>
               <textarea id="idea_content" name="idea[content]" class="form-control">{{ idea.content }}</textarea>
             </div>
 
@@ -64,12 +61,12 @@
               idea[images_attributes][1][file]
               idea[images_attributes][2][file]
             -->
-            <div class="form-group">
+            <!--<div class="form-group">
               <label for="idea_images_attributes_0_file">Image</label>
               <input type="file" id="idea_images_attributes_0_file" name="idea[images_attributes][0][file]" class="form-control" />
-            </div>
+            </div>-->
 
-            <button type="submit" class="btn btn-lg btn-default">Create idea</button>
+            <button type="submit" class="btn btn-lg btn-default">Add Song</button>
           </form>
       </div>
 
