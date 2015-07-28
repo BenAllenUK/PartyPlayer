@@ -75,13 +75,27 @@
     <script src="{{ 'scripts.js' | javascript_url }}"></script>
 
     <script type="text/javascript">
-        var ytUrl = "https://www.googleapis.com/youtube/v3/search?key=AIzaSyCWTgdcLJTdeobfiZLxc8wlo_SaeZcQfWE&channelId=UCzSSETtJJcCZ-6e6es9Qz6Q&part=snippet,id&order=date&maxResults=20";
+        var ytUrl = "https://www.googleapis.com/youtube/v3/search?key=AIzaSyCWTgdcLJTdeobfiZLxc8wlo_SaeZcQfWE&q=Hello&part=snippet,id&order=date&maxResults=20";
         $(document).ready(function() {
           // Youtube Results
           $.getJSON(ytUrl,function(result){
-              console.log(result);
+            for (i = 0; i < result.items.length; i++){
+              var thisItem = result.items[i];
+              console.log(thisItem.snippet.title)
+              console.log(thisItem.id.videoId)
+             }
           });
         });
+
+        function replaceContent(){
+          var content = $('#idea_content').text();
+          var url = "https://www.googleapis.com/youtube/v3/search?key=AIzaSyCWTgdcLJTdeobfiZLxc8wlo_SaeZcQfWE&q="+ content +"&part=snippet,id&order=date&maxResults=1";
+          $.getJSON(url,function(result){
+            var id = result.item[0].id.videoId;
+            console.log(id);
+            //$('#idea_content').text(id);
+          });
+        }
         </script>
   </body>
 </html>
