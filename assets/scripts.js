@@ -1,6 +1,5 @@
 $(document).ready(function(){
 
-    $("#entry_form").validate();
 
     $(function() {
 

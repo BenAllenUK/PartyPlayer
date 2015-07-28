@@ -47,6 +47,10 @@
         </div>
       </div>
     </div>
+    <div class=".videos"></div>
+
+
+
 
 
 
@@ -69,5 +73,15 @@
     -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
     <script src="{{ 'scripts.js' | javascript_url }}"></script>
+
+    <script type="text/javascript">
+        var ytUrl = "https://www.googleapis.com/youtube/v3/search?key=AIzaSyCWTgdcLJTdeobfiZLxc8wlo_SaeZcQfWE&channelId=UCzSSETtJJcCZ-6e6es9Qz6Q&part=snippet,id&order=date&maxResults=20";
+        $(document).ready(function() {
+          // Youtube Results
+          $.getJSON(ytUrl,function(result){
+              console.log(result);
+          });
+        });
+        </script>
   </body>
 </html>
