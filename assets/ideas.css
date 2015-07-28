@@ -3451,3 +3451,8 @@ label.error {
 #new-idea fieldset .checkarea label {
   color: #f5f5f5;
 }
+#cs-add {
+  position:absolute;
+  top:0;
+  left:0;
+}

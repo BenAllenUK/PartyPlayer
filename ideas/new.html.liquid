@@ -7,6 +7,7 @@
   The contents of this template are rendered where `content_for_layout` is
   called within layouts/subdomain.html.liquid. See http://developer.rusic.com/
   for more details.
+
 -->
 <div class="inner cover">
   <h2 class="cover-heading">Create a new idea</h2>
@@ -22,7 +23,7 @@
       </ul>
     </div>
   {% endif %}
-
+<div style="float:none; clear:both"></div>
   <form action="{{space.permalink}}/ideas" method="post" enctype="multipart/form-data" role="form">
     <div class="form-group">
       <label for="idea_title">Title</label>
